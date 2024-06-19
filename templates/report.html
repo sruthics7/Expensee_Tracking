@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Report - {{ report_type|capitalize }}</h1>
+    <ul>
+        {% for key, value in report_data.items() %}
+            <li>{{ key }}: ${{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
